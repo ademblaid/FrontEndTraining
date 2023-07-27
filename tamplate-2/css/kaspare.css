@@ -61,7 +61,7 @@ body {
 
 /* start components */
 .main-heading {
-  padding: 100px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .main-heading p {
-  width: 550px;
+  max-width: 550px;
   margin: 0 auto 100px;
   color: #777;
   line-height: 2;
@@ -488,7 +488,7 @@ header nav .form i {
   padding: 10px;
 }
 
-.portfolio .shuffle li.active{
+.portfolio .shuffle li.active {
   background-color: var(--main-color);
   color: white;
 }
@@ -616,12 +616,111 @@ header nav .form i {
   margin-bottom: 20px;
 }
 
-.video .text button{
+.video .text button {
   background-color: #333;
   color: white;
   padding: 10px 20px;
   border: none;
   text-transform: uppercase;
-
 }
 /* end video */
+
+/* start about  */
+.about {
+  padding-top: var(--section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+
+.about img {
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .about img {
+    bottom: -110px;
+    margin-top: -110px;
+  }
+}
+/* end about */
+
+/* start stats */
+.stats {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+  background-image: url("../images/back-ground-image-1.avif");
+  background-size: contain;
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats .container .box {
+  color: white;
+  padding: 50px;
+  background-color: var(--tranparent-color);
+}
+
+@media (max-width: 767px) {
+  .stats .container .box {
+    flex-basis: 100%;
+    /* border-bottom: 1px solid white; */
+  }
+}
+
+@media (min-width: 768px) {
+  .stats .container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats .container .box {
+    flex-basis: 25%;
+  }
+}
+
+.stats .container .box i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.stats .container .box .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.stats .container .box p {
+  font-size: 14px;
+}
+
+/* end stats */
