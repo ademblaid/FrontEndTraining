@@ -1,0 +1,99 @@
+/* start variable */
+:root {
+  --main-color: #19c8fa;
+  --tranparent-color: rgb(15, 116, 143, 0.7);
+  --section-padding: 100px;
+}
+/* end variable */
+
+/* general rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media quaris */
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end general rules */
+
+/* start components */
+
+/* end componenets*/
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container img {
+  height: 60px;
+}
+
+header nav .toggle-menu {
+  display: none;
+}
+
+header nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+}
+
+header .form {
+  color: white;
+  padding: 10px 0px 0 30px;
+  border-left: 1px solid white;
+}
+
+
+/* start heading */
