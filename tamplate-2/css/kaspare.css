@@ -76,27 +76,27 @@ body {
 .main-heading h2::before {
   content: "";
   position: absolute;
+  height: 2px;
+  width: 120px;
+  background-color: #333;
   left: 50%;
   transform: translateX(-50%);
-  height: 2px;
-  background-color: #333;
   bottom: -30px;
-  width: 120px;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
 .main-heading h2::after {
   content: "";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   width: 14px;
   height: 14px;
   border-radius: 50%;
   border: 1px solid #333;
-  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -38px;
   background-color: white;
   -webkit-border-radius: 50%;
@@ -939,7 +939,7 @@ header nav .form i {
 
 .pricing .plans {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
