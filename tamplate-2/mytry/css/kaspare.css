@@ -699,8 +699,8 @@ video {
   }
 
   .stats .container .box:not(:last-child) {
-  border-bottom: 1px solid rgb(216, 216, 216);
-}
+    border-bottom: 1px solid rgb(216, 216, 216);
+  }
 }
 
 @media (min-width: 768px) {
@@ -886,3 +886,417 @@ video {
   border-color: rgb(112, 112, 112) transparent transparent;
 }
 /* end skills */
+
+/* start quote */
+.quote {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/back-ground-image-1.avif");
+  background-size: contain;
+  text-align: center;
+  position: relative;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--tranparent-color);
+}
+
+.quote q {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+.quote q::before {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  content: "\f10d";
+  font-weight: 700;
+  top: -5px;
+  margin-right: 10px;
+}
+
+.quote q::after {
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  content: "\f10e";
+  font-weight: 700;
+  margin-left: 10px;
+  top: -5px;
+}
+
+.quote span {
+  position: absolute;
+  right: 10px;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+}
+/* end quote */
+
+/* start pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.pricing .plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .pricing .plans .plan {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .pricing .plans .plan {
+    flex-basis: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing .plans .plan {
+    flex-basis: 32%;
+  }
+}
+
+.pricing .plan .head {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+}
+
+.pricing .plan .head h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.pricing .plan .head span {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.pricing .plan .head span::before {
+  content: "$";
+  font-weight: normal;
+  font-size: 25px;
+  position: relative;
+  top: -30px;
+  margin-right: 20px;
+}
+.pricing .plan .head span::after {
+  content: "/Mo";
+  font-weight: normal;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.pricing .plans ul {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .plans ul li {
+  padding: 20px 0;
+  position: relative;
+}
+
+.pricing .plans ul li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 50%;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.pricing .plans .plan .foot {
+  width: fit-content;
+  margin: 30px auto;
+  padding: 15px;
+  border: 1px solid var(--main-color);
+}
+
+.pricing .plans .plan .foot a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.pricing .plans + .contact-text {
+  text-align: center;
+  margin: 30px auto 15px;
+  font-size: 20px;
+}
+
+.pricing .plans ~ .contact-link {
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  margin: 0 auto;
+  color: white;
+  background-color: var(--main-color);
+  padding: 10px 15px;
+}
+/* end pricing */
+
+/* start subscribtion */
+.subscribe {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/back-ground-image-1.avif");
+  background-size: contain;
+  position: relative;
+  color: white;
+}
+
+.subscribe::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subscribe .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+
+.subscribe form {
+  flex-basis: 58%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.subscribe form i {
+  position: absolute;
+  left: 10px;
+}
+
+.subscribe form input[type="email"] {
+  width: 60%;
+  background-color: transparent;
+  height: 84px;
+  padding: 30px 10px 30px 40px;
+  border: 1px solid white;
+  border-right: none;
+  caret-color: var(--main-color);
+  color: white;
+}
+
+.subscribe form input[type="submit"] {
+  width: 40%;
+  height: 84px;
+  padding: 30px 10px;
+  background-color: var(--main-color);
+  border: 1px solid white;
+  border-left: none;
+  color: white;
+}
+
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form input[type="submit"]:focus {
+  outline: none;
+}
+
+.subscribe p {
+  flex-basis: 40%;
+  line-height: 1.6;
+}
+
+@media(max-width: 992px) {
+  .subscribe p {
+    text-align: center;
+  }
+}
+/* end subscribtion */
+
+/* start contact us */
+.contact-us {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.contact-us .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .contact-us .content form {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us .content form {
+    flex-basis: 75%;
+  }
+
+  .contact-us .content .info {
+    flex-basis: 23%;
+  }
+}
+
+.contact-us .content form input,
+.contact-us .content form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  caret-color: var(--main-color);
+}
+
+.contact-us .content form input:focus,
+.contact-us .content form textarea:focus {
+  outline: none;
+}
+
+.contact-us .content form input[type=submit] {
+  width: fit-content;
+  background-color: var(--main-color);
+  color: white;
+  margin: 0 0 0 auto;
+}
+
+.contact-us .content form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-us .content .info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact-us .content .info .phone-numbers {
+  margin-bottom:85px;
+}
+
+@media (max-width: 767px) {
+  .contact-us .content .info {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contact-us .content .info .phone-numbers {
+    margin: 0 30px 0 0;
+  }
+
+}
+
+.contact-us .content .info > div > h3 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-us .content .info .phone-numbers a {
+  display: block;
+  background-color: rgb(99, 129, 228);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 5px;
+}
+
+.contact-us .content .info .phone-numbers a:hover {
+  background-color: rgb(48, 91, 233);
+}
+/* end contact us */
+
+/* start footer */
+.footer {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/back-ground-image-1.avif");
+  background-size: contain;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer .container {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.footer .container img {
+  margin-bottom: 30px;
+}
+
+.footer .container p:first-of-type {
+  font-size: 23px;
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+
+.footer .container .social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 50px;
+}
+
+.footer .container .social-icons i {
+  margin-left: 10px;
+}
+
+.footer .container p:nth-of-type(2) span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* end footer */

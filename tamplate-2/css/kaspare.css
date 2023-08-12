@@ -1144,7 +1144,7 @@ header nav .form i {
   border: 1px solid #ccc;
   margin-bottom: 30px;
   width: 100%;
-} 
+}
 
 .contact .content form .main-input:focus {
   outline: none;
@@ -1195,7 +1195,6 @@ header nav .form i {
 }
 
 .contact .content .info address {
-  /* margin-bottom: 40px; */
   color: #777;
 }
 
