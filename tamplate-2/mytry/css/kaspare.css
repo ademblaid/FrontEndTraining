@@ -697,6 +697,10 @@ video {
   .stats .box {
     flex-basis: 100%;
   }
+
+  .stats .container .box:not(:last-child) {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
 }
 
 @media (min-width: 768px) {
@@ -759,17 +763,16 @@ video {
 }
 
 .our-skills .container > div > h3 {
-  text-align: center;
-  font-size: 20px;
   font-weight: normal;
+  text-align: center;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .our-skills .container > div > p {
-  text-align: center;
   color: var(--grey-color);
-  margin: 0 auto 20px;
+  text-align: center;
+  margin: 0 auto 30px;
   line-height: 1.6;
 }
 
@@ -781,8 +784,8 @@ video {
 
 .our-skills .testimonials .content img {
   width: 100px;
-  margin-right: 50px;
   border-radius: 50%;
+  margin-right: 20px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -792,6 +795,7 @@ video {
 @media (max-width: 767px) {
   .our-skills .testimonials .content {
     flex-direction: column;
+    text-align: center;
   }
 
   .our-skills .testimonials .content img {
@@ -800,36 +804,28 @@ video {
 }
 
 .our-skills .testimonials .content .text {
-  border-bottom: 1px solid rgb(197, 194, 194);
   line-height: 1.6;
+  border-bottom: 1px solid lightgrey;
 }
 
-
-
-@media (max-width: 767px) {
-  .our-skills .testimonials .content .text p:first-child {
-    text-align: center;
-  }
-}
-
-.our-skills .testimonials .content .text p:nth-child(2) {
-  text-align: end;
+.our-skills .testimonials .content .text p {
   color: var(--grey-color);
-  font-style: italic;
+  text-align: right;
   margin-bottom: 10px;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .our-skills .testimonials .bullets {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: var(--section-padding);
 }
 
 .our-skills .testimonials .bullets li {
-  width: 15px;
-  height: 15px;
-  border: 1px solid rgb(119, 118, 118);
+  height: 14px;
+  width: 14px;
+  border: 1px solid black;
   margin-right: 10px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -839,21 +835,20 @@ video {
 }
 
 .our-skills .testimonials .bullets li.active {
-  border-color: var(--main-color);
   background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
-/* skills section */
+/* ---------- */
 
 .our-skills .skills .prog-holder h4 {
   font-weight: normal;
   margin: 30px 0 10px;
-  text-transform: uppercase;
 }
 
 .our-skills .skills .prog-holder .prog {
   height: 20px;
-  background-color: lightgrey;
+  background-color: rgb(226, 225, 225);
 }
 
 .our-skills .skills .prog-holder .prog span {
@@ -866,13 +861,14 @@ video {
 .our-skills .skills .prog-holder .prog span::before {
   content: attr(data-progress);
   position: absolute;
-  background-color: rgb(173, 171, 171);
-  text-align: center;
-  padding: 5px 0;
+  width: 40px;
+  height: 20px;
+  padding: 3px;
+  top: -33px;
+  right: -23px;
+  background-color: rgb(112, 112, 112);
   color: white;
-  width: 60px;
-  right: -30px;
-  top: calc(-100% - 20px);
+  text-align: center;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -883,11 +879,10 @@ video {
 .our-skills .skills .prog-holder .prog span::after {
   content: "";
   position: absolute;
-  border: 10px solid black;
-  right: 0;
-  top: -60%;
+  border-width: 10px;
+  border-style: solid;
+  top: -10px;
   right: -10px;
-  border-color: rgb(173, 171, 171) transparent transparent;
+  border-color: rgb(112, 112, 112) transparent transparent;
 }
-
 /* end skills */
