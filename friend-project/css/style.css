@@ -1,0 +1,325 @@
+/* start variable */
+:root {
+  --section-padding: 60px;
+  --main-color: rgb(41, 91, 167);
+}
+/* end variable */
+
+/* general rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Tajawal", sans-serif;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+/* Media quaris */
+
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end general rules */
+
+/* start header */
+
+header {
+  background-color: rgb(61, 57, 57);
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo img {
+  height: 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+header nav > i,
+header nav a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+
+  font-size: 19px;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+header nav > a {
+  background-color: rgb(41, 91, 167);
+  margin-left: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/* end header */
+
+/* start landing */
+.landing {
+  height: 30vh;
+  background-image: url("../images/wide-background.jpg");
+  background-size: cover;
+}
+
+.landing .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.landing .container h1 {
+  margin: 0;
+  color: white;
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  font-weight: normal;
+  text-shadow: -3px 1px 0px rgb(0, 0, 0);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.landing .container ul {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.landing .container ul li {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  white-space: nowrap;
+}
+
+.landing .container ul li:first-child::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f055";
+  padding: 0 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: green;
+}
+
+.landing .container ul li:not(:first-child)::after {
+  content: ">";
+  padding: 0 5px;
+  font-weight: bold;
+}
+/* end landing */
+
+/* start after landing */
+.after-landing {
+  background-color: rgb(56, 56, 56);
+  text-align: center;
+}
+
+.after-landing img {
+  height: 25px;
+}
+/* end after landing */
+
+/* start tips */
+.remote-tips {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.remote-tips .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remote-tips .main-content {
+  width: 70%;
+  margin-right: 10px;
+  border: 1px solid #e4e5e6;
+  padding: 10px;
+  height: fit-content;
+}
+
+/* start aside */
+
+.remote-tips aside {
+  flex: 1;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #e4e5e6;
+  height: fit-content;
+}
+
+.remote-tips aside > form {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.remote-tips aside > form input {
+  padding: 5px;
+  width: 85%;
+  border: 1px solid lightgrey;
+  border-right: none;
+  outline: none;
+}
+
+.remote-tips aside > form button {
+  width: 15%;
+  background-color: rgb(51, 51, 51);
+  border: 1px solid lightgrey;
+  border-left: none;
+  color: white;
+}
+
+.remote-tips aside > form button:hover {
+  background-color: white;
+  border: 1px solid rgb(51, 141, 245);
+}
+
+.remote-tips aside > form button:hover i {
+  color: rgb(51, 141, 245);
+}
+
+.remote-tips aside div.q\&a-section {
+  padding-top: 20px;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.remote-tips aside div.q\&a-section a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(87, 151, 247);
+  padding: 5px 0;
+}
+
+.remote-tips aside div.q\&a-section a::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f055";
+  font-weight: bold;
+  color: rgb(72, 192, 72);
+  position: absolute;
+  right: 0;
+}
+
+.remote-tips aside .folow-us {
+  padding: 20px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+.remote-tips aside .folow-us i {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.remote-tips aside .news-letter {
+  padding: 20px 0;
+}
+
+.remote-tips aside .news-letter > p {
+  font-weight: bold;
+}
+
+.remote-tips aside .news-letter form {
+  padding: 20px 5px;
+}
+
+.remote-tips aside .news-letter form label:first-child {
+  display: block;
+}
+
+.remote-tips aside .news-letter form input:nth-child(2) {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  margin: 5px 0;
+}
+
+.remote-tips aside .news-letter p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+/* end tips */
