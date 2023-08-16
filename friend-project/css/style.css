@@ -295,8 +295,9 @@ header nav > a {
   padding: 20px 0;
 }
 
-.remote-tips aside .news-letter > p {
+.remote-tips aside .news-letter p {
   font-weight: bold;
+  line-height: 1.6;
 }
 
 .remote-tips aside .news-letter form {
@@ -309,17 +310,77 @@ header nav > a {
 
 .remote-tips aside .news-letter form input:nth-child(2) {
   display: block;
-  padding: 5px;
+  padding: 10px 5px;
   width: 100%;
   border: 1px solid lightgrey;
   margin: 5px 0;
 }
 
-.remote-tips aside .news-letter p {
-  font-weight: bold;
-  margin-bottom: 5px;
+.remote-tips aside .news-letter form label[for=email]::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+  font-size: 40px;
+  position: relative;
+  bottom: -10px;
 }
 
+.remote-tips aside .news-letter form p {
+  font-weight: bold;
+  padding: 20px 0 15px;
+}
+
+.remote-tips aside .news-letter form input[type=submit] {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: rgb(20, 142, 241);
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.remote-tips aside .articles {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-top: 3px solid rgb(20, 142, 241);
+}
+
+.remote-tips aside .articles h2 {
+  text-align: center;
+  font-weight: normal;
+  margin: 10px 0 20px;
+}
+
+.remote-tips aside .articles div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.remote-tips aside .articles div:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.remote-tips aside .articles div img {
+  flex-basis: 70px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.remote-tips aside .articles div a {
+  flex: 1;
+  font-weight: normal;
+  text-decoration: none;
+  color: rgb(20, 142, 241);
+}
+
+.remote-tips aside .articles div a:hover {
+  color: rgb(17, 110, 185);
+}
 
 
 /* end tips */
