@@ -13,11 +13,12 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
 .heading h2 {
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
-  margin:0 5px 0 0;
+  margin: 0 5px 0 0;
 }
 
 .heading div {
@@ -25,6 +26,84 @@
   flex: 1;
   background-color: var(--light-blue);
 }
+
+/* remote jobs components */
+.remote-tips .main-content.remote-jobs .box {
+  background-color: var(--containers-color);
+  padding: 15px;
+  border: 1px solid lightgrey;
+  margin-bottom: 15px;
+}
+
+.remote-tips .main-content.remote-jobs .box .content {
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+.remote-tips .main-content.remote-jobs .box a {
+  text-decoration: none;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line:not(:last-child) {
+  padding: 15px;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line:not(:last-child):hover {
+  background-color: rgba(128, 128, 128, 0.068);
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .job-info {
+  display: flex;
+  
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .job-info img {
+  width: 50px;
+  margin-right: 15px;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .job-info .info h3 {
+  color: var(--light-blue);
+  margin-bottom: 10px;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line:hover .job-info .info h3 {
+  color: rgb(20, 90, 182);
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .job-info .info p {
+  color: black;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .job-info .info p span:nth-child(2n) {
+  padding: 0px 8px;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
+  margin:0 8px;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line .time {
+  color: black;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line:last-child a {
+  display: block;
+  padding: 15px;
+  text-align: right;
+  color: var(--light-blue);
+  font-size: 17px;
+}
+
+.remote-tips .main-content.remote-jobs .box .content .line:last-child a:hover {
+  color: rgb(28, 107, 211);
+}
+
+/* end remote jobs components */
+
 /* end components */
 
 /* general rules */
@@ -118,12 +197,12 @@ header nav a {
   display: block;
   padding: 10px 15px;
   color: white;
-
+  text-decoration: none;
   font-size: 19px;
 }
 
-header nav a {
-  text-decoration: none;
+header nav a.active {
+  color: var(--light-blue);
 }
 
 header nav > a {
@@ -137,10 +216,109 @@ header nav > a {
 }
 /* end header */
 
+/* start introduction - remote jobs */
+.introduction {
+  padding-top: 15px;
+}
+
+.introduction p:first-of-type {
+  padding-bottom: 15px;
+}
+
+.introduction p:first-of-type span {
+  color: var(--light-blue);
+}
+
+.introduction p:nth-of-type(2) {
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.introduction .search {
+  background-color: var(--containers-color);
+  border: 1px solid lightgrey;
+}
+
+.introduction .search form {
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.introduction .search form input[type="text"] {
+  width: 84%;
+  padding: 5px 10px;
+  border: 1px solid lightgrey;
+  outline: none;
+}
+
+.introduction .search form input[type="submit"] {
+  width: 15%;
+  padding: 5px 10px;
+  color: white;
+  text-transform: uppercase;
+  background-color: var(--light-blue);
+}
+
+.introduction .search form input[type="submit"]:hover {
+  background-color: rgb(13, 45, 87);
+}
+
+.introduction .search .keywords ul {
+  padding: 10px 15px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.introduction .search .keywords ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.introduction .search .keywords ul li a {
+  display: block;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  margin-right: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.introduction .search .keywords ul li a:hover {
+  color: var(--light-blue);
+}
+
+.introduction .search .keywords ul li:last-child a {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(79, 184, 245, 0.308);
+  border-color: var(--light-blue);
+  vertical-align: middle;
+}
+
+.introduction .search .keywords ul li:last-child a:hover {
+  color: rgb(179, 176, 176);
+}
+/* end introduction -remote jobs */
+
 /* start landing */
 .landing {
   height: 30vh;
   background-image: url("../images/wide-background.jpg");
+  background-size: cover;
+}
+
+.landing.remote-jobs {
+  background-image: url("../images/wide-pic-2.jpg");
+  height: 15vh;
   background-size: cover;
 }
 
@@ -150,6 +328,10 @@ header nav > a {
   align-items: center;
   height: 100%;
   position: relative;
+}
+
+.landing.remote-jobs .container {
+justify-content: center;
 }
 
 .landing .container h1 {
@@ -238,6 +420,11 @@ header nav > a {
   height: fit-content;
 }
 
+.remote-tips .main-content.remote-jobs {
+  display: flex;
+  flex-direction: column;
+}
+
 /* start tips */
 .remote-tips .main-content .tips {
   border: 1px solid lightgrey;
@@ -245,7 +432,7 @@ header nav > a {
   background-color: var(--containers-color);
 }
 
-.remote-tips .main-content .tips .qst-comp  {
+.remote-tips .main-content .tips .qst-comp {
   margin-top: 15px;
   padding: 20px;
   border: 1px solid lightgrey;
@@ -269,7 +456,7 @@ header nav > a {
 .remote-tips .main-content .tips .qst-comp .qst-comp-container > div > h2 {
   font-weight: normal;
   text-align: center;
-  padding:0 0 10px 0;
+  padding: 0 0 10px 0;
   margin: 0 0 20px 0;
   border-bottom: 1px solid lightgrey;
 }
@@ -328,7 +515,6 @@ header nav > a {
 .remote-tips .main-content .tips .qst-comp .comp div img:hover {
   border-color: var(--light-blue);
 }
-
 
 .remote-tips .main-content .tips .qst-comp > a {
   display: block;
@@ -402,29 +588,60 @@ header nav > a {
   border: 1px solid lightgrey;
 }
 
-.remote-tips .main-content .remote-jobs .remote-container .comp-box .content img {
+.remote-tips
+  .main-content
+  .remote-jobs
+  .remote-container
+  .comp-box
+  .content
+  img {
   flex-basis: 90px;
   align-self: center;
   width: 100%;
   margin-right: 10px;
 }
 
-.remote-tips .main-content .remote-jobs .remote-container .comp-box .content .info {
+.remote-tips
+  .main-content
+  .remote-jobs
+  .remote-container
+  .comp-box
+  .content
+  .info {
   padding: 5px 0;
 }
 
-.remote-tips .main-content .remote-jobs .remote-container .comp-box .content .info h3 {
+.remote-tips
+  .main-content
+  .remote-jobs
+  .remote-container
+  .comp-box
+  .content
+  .info
+  h3 {
   margin-bottom: 10px;
 }
 
-.remote-tips .main-content .remote-jobs .remote-container .comp-box .content span {
+.remote-tips
+  .main-content
+  .remote-jobs
+  .remote-container
+  .comp-box
+  .content
+  span {
   padding: 0 10px;
   /* border-left: 1px solid lightgrey; */
   margin-left: 10px;
   position: relative;
 }
 
-.remote-tips .main-content .remote-jobs .remote-container .comp-box .content span::before {
+.remote-tips
+  .main-content
+  .remote-jobs
+  .remote-container
+  .comp-box
+  .content
+  span::before {
   content: "";
   position: absolute;
   height: 12px;
@@ -568,9 +785,29 @@ header nav > a {
 .remote-tips aside {
   flex: 1;
   padding: 15px;
+  font-size: 20px;
   background-color: #f8f9fa;
   border: 1px solid #e4e5e6;
   height: fit-content;
+  font-size: 15px;
+}
+
+.remote-tips aside > a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(26, 197, 26);
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.remote-tips aside > a:hover {
+  background-color: rgb(19, 136, 19);
 }
 
 .remote-tips aside > form {
@@ -671,7 +908,7 @@ header nav > a {
   margin: 5px 0;
 }
 
-.remote-tips aside .news-letter form label[for=email]::after {
+.remote-tips aside .news-letter form label[for="email"]::after {
   content: "*";
   color: red;
   margin-left: 5px;
@@ -684,7 +921,7 @@ header nav > a {
   padding: 20px 0 15px;
 }
 
-.remote-tips aside .news-letter form input[type=submit] {
+.remote-tips aside .news-letter form input[type="submit"] {
   margin-top: 20px;
   padding: 5px 20px;
   background-color: rgb(20, 142, 241);
@@ -739,6 +976,5 @@ header nav > a {
 .remote-tips aside .articles div a:hover {
   color: rgb(17, 110, 185);
 }
-
 
 /* end tips */
