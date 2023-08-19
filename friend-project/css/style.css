@@ -234,7 +234,7 @@ header nav > a {
 
 .remote-tips .main-content {
   width: 70%;
-  margin-right: 10px;
+  margin-right: 20px;
   height: fit-content;
 }
 
@@ -288,6 +288,10 @@ header nav > a {
   text-decoration: none;
 }
 
+.remote-tips .main-content .tips .qst-comp .qst a:hover {
+  border-color: var(--light-blue);
+}
+
 .remote-tips .main-content .tips .qst-comp .qst a::after {
   content: ">";
   font-size: 20px;
@@ -321,6 +325,11 @@ header nav > a {
   border: 1px solid lightgrey;
 }
 
+.remote-tips .main-content .tips .qst-comp .comp div img:hover {
+  border-color: var(--light-blue);
+}
+
+
 .remote-tips .main-content .tips .qst-comp > a {
   display: block;
   text-align: center;
@@ -348,6 +357,211 @@ header nav > a {
 }
 
 /* end tips */
+
+/* start remote jobs */
+.remote-tips .main-content .remote-jobs {
+  padding: 15px;
+  background-color: var(--containers-color);
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  font-size: 15px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box:hover {
+  border: 1px solid var(--light-blue);
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box h2 {
+  text-align: center;
+  font-weight: normal;
+  color: var(--light-blue);
+  margin: 0 0 10px 0;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content {
+  display: flex;
+  padding: 5px;
+  background-color: var(--containers-color);
+  border: 1px solid lightgrey;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content img {
+  flex-basis: 90px;
+  align-self: center;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content .info {
+  padding: 5px 0;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content .info h3 {
+  margin-bottom: 10px;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content span {
+  padding: 0 10px;
+  /* border-left: 1px solid lightgrey; */
+  margin-left: 10px;
+  position: relative;
+}
+
+.remote-tips .main-content .remote-jobs .remote-container .comp-box .content span::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 1px;
+  background-color: grey;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.remote-tips .main-content .remote-jobs > a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 15px 0;
+  border: 1px solid var(--light-blue);
+  border-radius: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--light-blue);
+  transition: 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.remote-tips .main-content .remote-jobs > a:hover {
+  background-color: var(--light-blue);
+  color: white;
+}
+/* end remote jobs */
+
+/* start jobs articles */
+.remote-tips .main-content .articles {
+  padding: 15px;
+  background-color: var(--containers-color);
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+}
+
+.remote-tips .main-content .articles .cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remote-tips .main-content .articles .cards .card {
+  flex-basis: 32%;
+  border: 1px solid lightgrey;
+}
+
+.remote-tips .main-content .articles .cards .card img {
+  width: 100%;
+}
+
+.remote-tips .main-content .articles .cards .card .info {
+  padding: 15px;
+}
+
+.remote-tips .main-content .articles .cards .card .info a {
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+.remote-tips .main-content .articles .cards .card .info a:hover {
+  color: rgb(26, 94, 172);
+}
+
+.remote-tips .main-content .articles .cards .card .info p {
+  color: #555;
+}
+/* end jobs articles */
+
+/* start footer */
+.footer {
+  background-color: #363839;
+  border-top: 20px solid lightgrey;
+  border-bottom: 1px solid #898a8a;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  color: #898a8a;
+  padding: 30px 10px;
+}
+
+.footer .footer-content > div {
+  flex-basis: 18%;
+}
+
+.footer .footer-content div h3 {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+.footer .footer-content div:not(:first-child) ul li:not(:first-child) {
+  padding-left: 10px;
+}
+
+.footer .footer-content div a {
+  text-decoration: none;
+  color: #898a8a;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.footer .footer-content div a:hover {
+  color: var(--light-blue);
+}
+/* end footer */
+
+/* start policy */
+.policy {
+  background-color: #282a2b;
+  color: white;
+  padding: 15px;
+}
+
+.policy a {
+  color: white;
+  text-decoration: none;
+}
+/* end policy */
 
 /* start aside */
 
@@ -379,15 +593,18 @@ header nav > a {
   border: 1px solid lightgrey;
   border-left: none;
   color: white;
+  vertical-align: middle;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 
 .remote-tips aside > form button:hover {
   background-color: white;
   border: 1px solid rgb(51, 141, 245);
-}
-
-.remote-tips aside > form button:hover i {
-  color: rgb(51, 141, 245);
+  color: var(--light-blue);
 }
 
 .remote-tips aside div.q\&a-section {
@@ -417,6 +634,11 @@ header nav > a {
 .remote-tips aside .folow-us {
   padding: 20px 0;
   border-bottom: 1px solid lightgrey;
+}
+
+.remote-tips aside .folow-us a {
+  all: unset;
+  cursor: pointer;
 }
 
 .remote-tips aside .folow-us i {
@@ -459,13 +681,12 @@ header nav > a {
 }
 
 .remote-tips aside .news-letter form p {
-  font-weight: bold;
   padding: 20px 0 15px;
 }
 
 .remote-tips aside .news-letter form input[type=submit] {
-  margin-top: 10px;
-  padding: 5px 15px;
+  margin-top: 20px;
+  padding: 5px 20px;
   background-color: rgb(20, 142, 241);
   color: white;
   border-radius: 5px;
@@ -473,6 +694,10 @@ header nav > a {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+}
+
+.remote-tips aside .news-letter form p + div + div {
+  padding-top: 5px;
 }
 
 .remote-tips aside .articles {
