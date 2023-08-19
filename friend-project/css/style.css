@@ -322,6 +322,25 @@ header nav > a {
   background-size: cover;
 }
 
+.landing.remote-campanies {
+  background-color: rgb(29, 140, 231);
+  background-image: none;
+  height: 15vh;
+  text-align: center;
+}
+
+.landing.remote-campanies .container {
+  justify-content: center;
+}
+
+.landing.remote-campanies .container p {
+  position: relative;
+  font-size: 30px;
+  color: white;
+  bottom: -40px;
+  text-shadow: -3px 2px 0px rgba(0, 0, 0, 0.9);
+}
+
 .landing .container {
   display: flex;
   justify-content: space-between;
