@@ -16,13 +16,14 @@
 
 .heading h2 {
   margin: 0;
-  font-weight: normal;
+  font-weight: 300;
   text-transform: uppercase;
   margin: 0 5px 0 0;
+  font-size: 30px;
 }
 
 .heading div {
-  height: 4px;
+  height: 2px;
   flex: 1;
   background-color: var(--light-blue);
 }
@@ -997,3 +998,230 @@ justify-content: center;
 }
 
 /* end tips */
+
+/* remote coampnies html page */
+.stats {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.stats .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats .container .box {
+  padding: 20px;
+  border: 1px solid lightgrey;
+  width: 32%;
+  text-align: center;
+}
+
+.stats .container .box i {
+  display: block;
+  font-size: 50px;
+  color: var(--light-blue);
+  margin-bottom: 10px;
+}
+
+.stats .container .box .number {
+  font-size: 70px;
+  font-weight: normal;
+  color: var(--light-blue);
+  margin-bottom: 10px;
+}
+
+.stats .container .box p {
+  font-size: 20px;
+}
+/* end remote compnaies html page */
+
+/* start search remote campanies */
+.search-q-a .container form {
+  display: flex;
+  width: 100%;
+  background-color: var(--containers-color);
+  padding: 15px;
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.search-q-a .container form input[type="text"] {
+  width: 85%;
+  margin-right: 5px;
+  padding: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-q-a .container form input[type="submit"] {
+  flex: 1;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--light-blue);
+}
+
+.search-q-a .container form input[type="submit"]:hover {
+  background-color: rgb(19, 97, 170);
+}
+
+.search-q-a .container .msg {
+  background-color: #e1f4de;
+  padding: 15px;
+  color: rgb(5, 65, 5);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-q-a .container .msg a {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+/* end search remote conpanies */
+
+/* start conteiners remote coampanies */
+
+.camp-qst {
+  margin-bottom: 20px;
+}
+.camp-qst .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.camp-qst .container > div {
+  flex-basis: 48%;
+  border: 1px solid lightgrey;
+  background-color: white;
+  padding: 20px 20px 0 ;
+  height: fit-content;
+}
+
+.camp-qst .container .qst .box {
+  border: 1px solid lightgrey;
+  background-color: var(--containers-color);
+  padding: 20px 5px;
+  margin-bottom: 20px;
+}
+
+.camp-qst .container .qst .box .title h3 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.camp-qst .container .qst .box .title h3 i {
+  padding-right: 10px;
+}
+
+.camp-qst .container .qst .box .content {
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 10px 25px;
+
+}
+
+.camp-qst .container .qst .box .content ul {
+  list-style: disc;
+}
+
+.camp-qst .container .qst .box .content ul li a {
+  display: block;
+  padding: 2px 0;
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
+.camp-qst .container .qst .box .content ul li a:hover {
+  color: rgb(9, 87, 189)
+}
+
+.camp-qst .comapanies .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.camp-qst .comapanies .content > div {
+  width: 12%;
+  
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--light-blue);
+  font-size: 14px;
+}
+
+.camp-qst .comapanies .content > div:not(:nth-child(7n + 7)) {
+  margin-right: 8px;
+}
+
+
+
+.camp-qst .comapanies .content > div img {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid lightgrey;
+}
+/* end conteiners remote coampanies */
+
+/* start resources content css */
+.remote-tips .box {
+  background-color: var(--containers-color);
+  padding: 15px 20px;
+  border: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.remote-tips .box .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remote-tips .box .content > div {
+  flex-basis: 48%;
+  border: 1px solid lightgrey;
+}
+
+.remote-tips .box .content > div img {
+  max-width: 100%;
+}
+
+.remote-tips .box .content > div .info {
+  padding: 20px;
+}
+
+.remote-tips .box .content > div .info a {
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+  color: var(--light-blue);
+}
+
+.remote-tips .box .content > div .info a:hover {
+  color: rgb(35, 114, 204);
+}
+
+.remote-tips .box .content > div .info p {
+  font-size: 15px;
+  line-height: 1,6;
+}
+
+.remote-tips .box > a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px;
+  width: fit-content;
+  background-color: var(--light-blue);
+  color: white;
+  margin: 15px 0 0 auto;
+  text-transform: uppercase;
+  border: 1px solid var(--light-blue);
+}
+
+.remote-tips .box > a:hover {
+  background-color: white;
+  border: 1px solid var(--light-blue);
+  color: var(--light-blue);
+}
+/* end resources content css */
