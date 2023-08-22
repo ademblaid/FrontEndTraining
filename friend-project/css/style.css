@@ -105,6 +105,27 @@
 
 /* end remote jobs components */
 
+/* start post a remote jobs components */
+.post-a-remote-job-button {
+  text-decoration: none;
+  display: block;
+  margin: 30px 0;
+  padding: 20px 40px;
+  background-color: var(--light-blue);
+  color: white !important;
+  width: fit-content;
+  margin: 30px auto 0;
+  font-size: 21px;
+  text-transform: uppercase;
+  border: 1px solid var(--light-blue);
+}
+
+.post-a-remote-job-button:hover {
+  color: var(--light-blue) !important;
+  background-color: white;
+}
+/* end post a remote jobs components */
+
 /* end components */
 
 /* general rules */
@@ -164,7 +185,8 @@ body {
 
 header {
   background-color: rgb(61, 57, 57);
-  padding: 10px 0;
+  padding: 5px 0;
+  max-height: 90px;
 }
 
 header .container {
@@ -174,7 +196,7 @@ header .container {
 }
 
 header .container .logo img {
-  height: 50px;
+  height: 30px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -191,15 +213,16 @@ header .container nav {
 
 header .container nav ul {
   display: flex;
+  justify-content: flex-end;
 }
 
 header nav > i,
 header nav a {
   display: block;
-  padding: 10px 15px;
+  padding: 5px 15px;
   color: white;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 16px;
 }
 
 header nav a.active {
@@ -415,10 +438,11 @@ justify-content: center;
 .after-landing {
   background-color: rgb(56, 56, 56);
   text-align: center;
+  padding: 5px 0 0;
 }
 
 .after-landing img {
-  height: 25px;
+  height: 20px;
 }
 /* end after landing */
 
@@ -1225,3 +1249,236 @@ justify-content: center;
   color: var(--light-blue);
 }
 /* end resources content css */
+
+/* start sign up */
+.sign-up .content {
+  border: 1px solid lightgrey;
+  background-color: var(--containers-color);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sign-up .content .box {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sign-up .content .box .heading {
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.sign-up .content .box .before i {
+  color: var(--light-blue);
+  font-size: 50px;
+  margin-bottom: 35px;
+}
+
+.sign-up .content .box .before h3 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.sign-up .content .box form {
+  padding: 30px 10px 20px;
+}
+
+.sign-up .content .box form > div {
+  margin-bottom: 20px;
+}
+
+.sign-up .content .box form > div:not(:nth-last-child(2)) label,
+.sign-up .content .box form > div:not(:nth-last-child(2)) input {
+  display: block;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+}
+
+.sign-up .content .box form div > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sign-up .content .box form div > div span {
+  padding: 10px 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.sign-up .content .box form div > div span:hover {
+  cursor: pointer;
+}
+
+.sign-up .content .box form div:nth-last-child(2) label {
+  font-weight: 600;
+}
+
+.sign-up .content .box form > input:last-child {
+  padding: 10px 15px;
+  color: white;
+  background-color: var(--light-blue);
+}
+
+.sign-up .content .box form > input:last-child:hover {
+  background-color: rgb(46, 116, 221);
+}
+
+.sign-up .content .box .after a {
+  text-decoration: none;
+  color: var(--light-blue);
+}
+
+.sign-up .content .box .after a:first-child {
+  display: block;
+  margin-bottom: 10px;
+}
+/* end sign up */
+
+/* start post remote jobs page */
+.landing-post-remote-jobs {
+  height: 30vh;
+  background-image: url("../images/wide-pic-2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.landing-post-remote-jobs .container {
+  color: white;
+  text-align: center;
+}
+
+.landing-post-remote-jobs .container h1 {
+  margin: 0;
+  position: relative;
+  bottom: -50px;
+  font-size: 50px;
+  text-shadow: -4px 1px 1px lightcoral;
+}
+
+.landing-post-remote-jobs .container a {
+  display: block;
+  position: relative;
+  bottom: -100px;
+  text-transform: uppercase;
+  font-size: 22px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--light-blue);
+  width: fit-content;
+  padding: 10px 30px;
+  margin: 0 auto;
+  border: 1px solid var(--light-blue);
+}
+
+.landing-post-remote-jobs .container a:hover {
+  color: var(--light-blue);
+  background-color: white;
+}
+
+/* start content */
+.post-content {
+  background-color: var(--containers-color);
+}
+
+.post-content .container .first {
+  padding: 50px 10px;
+}
+
+.post-content .container .first h1 {
+  font-weight: normal;
+  font-size: 40px;
+  margin: 0 0 10px;
+}
+
+.post-content .container .first a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+.post-content .container .first .content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;text-align: center;
+}
+
+.post-content .container .first .content > div {
+  width: 48%;
+  padding: 15px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.post-content .container .first .content > div h3 {
+  font-weight: normal;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.post-content .container .first .content > div i {
+  color: var(--light-blue);
+  margin-bottom: 20px;
+}
+
+.post-content .container .first .content > div p {
+  margin-bottom: 20px;
+}
+
+.post-content .container .first .content > div > a {
+  display: block;
+  text-align: right;
+}
+
+/* start second */
+.secend {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.secend .container h3 {
+  font-size: 25px;
+  font-weight: normal;
+}
+.secend .container div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.secend div img {
+  width: 120px;
+  padding: 10px;
+}
+
+.secend .container p {
+  font-size: 20px;
+  color: rgb(110, 109, 109);
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* start thered */
+.thered {
+  background-color: var(--containers-color);
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+/* end thered */
+
+
+/* end second */
+
+/* end content */
+
+/* end post remote jobs page */
