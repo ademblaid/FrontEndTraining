@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
+  <title>Post Remote Jobs formela</title>
   <!-- web font css file -->
   <link rel="stylesheet" href="css/all.min.css">
   <!-- normalize css file -->
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
   <!-- start header -->
   <header>
     <div class="container">
@@ -39,79 +40,90 @@
   </header>
   <!-- end header -->
 
-  <!-- start landing -->
-  <div class="landing remote-jobs">
-    <div class="container">
-      <h1>Sign Up</h1>
-    </div>
-  </div>
-  <!-- end landing -->
-
   <!-- start introduction -->
   <div class="introduction">
     <div class="container">
-      <p><span>Home</span> / Remote Jobs</p>
+      <p><span>Home</span> / <span>why Post on FIND ME A JOB</span> / Post a Remote Job</p>
     </div>
   </div>
   <!-- end introduction -->
 
   <!-- start content -->
-  <div class="sign-up">
+  <div class="posteremotejobformela">
     <div class="container">
       <div class="content">
-        <div class="box">
-          <div class="heading">
-            <h2>Looking for remote work?</h2>
+        <h1>Post Remote Jobs *</h1>
+        <form action="#">
+          <div>
+            <label for="company-name">Your Company's Name</label>
+            <input type="text" name="company-name">
           </div>
-          <div class="before">
-            <i class="far fa-envelope fa-lg"></i>
-            <h3>Sign up for our Daily Job Alerts.</h3>
-            <p>Receive the latest jobs from your selected categories up to once a day.</p>
+          <div>
+            <label for="email">Your Email Address</label>
+            <input type="email" name="email">
           </div>
-          <form action="#">
-            <div>
-              <label for="email">Your Email Address:</label>
-              <input type="email" name="email" placeholder="YourName@Email.com">
-            </div>
-            <div>
-              <label for="categories">Your Email Address:</label>
-              <div>
-                <span>Accounting</span>
-                <span>Customer Service</span>
-                <span>Data Entry</span>
-                <span>Design</span>
-                <span>Developer</span>
-                <span>Editing</span>
-                <span>Healthcare</span>
-                <span>HR</span>
-                <span>IT</span>
-                <span>Legal</span>
-                <span>Marketing</span>
-                <span>Project Manager</span>
-                <span>QA</span>
-                <span>Other</span>
-              </div>
-            </div>
-            <div>
-              <label for="Job">Select Jobs Type:</label>
-              <div>
-                <span>Full-time</span>
-                <span>Part-time</span>
-                <span>International</span>
-              </div>
-            </div>
-            <div>
-              <input type="checkbox" name="checkbox">
-              <label for="checkbox">Also sign up for our Fresh Jobs newsletter featuring curated jobs twice a
-                week</label>
-            </div>
-            <input type="submit" value="Sign Up!">
-          </form>
-          <div class="after">
-            <a href="remote-jobs.html">Start searching for remote jobs now ></a>
-            Employer? <a href="poste-remote-job.html">Post remote jobs ></a>
+          <div>
+            <label for="job-post-title">Job Post Title</label>
+            <input type="text" name="job-post-title">
           </div>
-        </div>
+          <div>
+            <label for="postlink-email">Job Post Link Or Email Address</label>
+            <input type="text" name="postlink-email">
+          </div>
+          <div>
+            <label for="hiddenInput">Job Post Text</label>
+            <div id="toolbar">
+              <button type="button" onclick="toggleCommand('bold', this, event);">Bold</button>
+              <button type="button" onclick="toggleCommand('italic', this, event);">Italic</button>
+              <button type="button" id="listButton" onclick="toggleCommand('insertUnorderedList', this);">List</button>
+              <button type="button" id="linkButton" onclick="createLink(this);">Link</button>
+            </div>
+
+            <div id="editor" contenteditable>
+              Type here...
+            </div>
+
+            <input type="hidden" id="hiddenInput" name="editorContent">
+
+            <div id="linkOptions" style="display: none; position: fixed;">
+              <button onclick="modifyLink()">Modify Link</button>
+              <button onclick="goToLink()">Go To Link</button>
+            </div>
+          </div>
+          <div>
+            <h3 for="location-req">Location Requirement?</h3>
+            <div>
+              <input type="radio" name="location-req" id="option1">
+              <label for="option1">Any where in the world</label>
+            </div>
+            <div>
+              <input type="radio" name="location-req" id="option2">
+              <label for="option2">US locations only</label>
+            </div>
+            <div>
+              <input type="radio" name="location-req" id="option3">
+              <input type="text" placeholder="Other">
+            </div>
+          </div>
+          <div>
+            <h3>Tags (add any that apply)</h3>
+            <div>
+              <input type="checkbox" name="tag1" id="tag1">
+              <label for="tag1">Entry-level job</label>
+            </div>
+            <div>
+              <input type="checkbox" name="tag2" id="tag2">
+              <label for="tag2">Freelance job</label>
+            </div>
+            <div>
+              <input type="checkbox" name="tag3" id="tag3">
+              <label for="tag3">Part-time job</label>
+            </div>
+          </div>
+          <input type="submit" value="Submit job">
+        </form>
+        <p>*jobs subject to editorial approval. <br>
+          Question? <a href="#">Contact us.</a></p>
       </div>
     </div>
   </div>
@@ -200,6 +212,9 @@
     </div>
   </div>
   <!-- end policy -->
+
+  <script src="js/script.js"></script>
+
 </body>
 
 </html>

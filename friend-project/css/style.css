@@ -29,23 +29,23 @@
 }
 
 /* remote jobs components */
-.remote-tips .main-content.remote-jobs .box {
+.remote-tips .main-content.remote-jobs .box1 {
   background-color: var(--containers-color);
   padding: 15px;
   border: 1px solid lightgrey;
   margin-bottom: 15px;
 }
 
-.remote-tips .main-content.remote-jobs .box .content {
+.remote-tips .main-content.remote-jobs .box1 .content {
   background-color: white;
   border: 1px solid lightgrey;
 }
 
-.remote-tips .main-content.remote-jobs .box a {
+.remote-tips .main-content.remote-jobs .box1 a {
   text-decoration: none;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line:not(:last-child) {
+.remote-tips .main-content.remote-jobs .box1 .content .line:not(:last-child) {
   padding: 15px;
   display: flex;
   border-bottom: 1px solid lightgrey;
@@ -53,45 +53,63 @@
   align-items: center;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line:not(:last-child):hover {
+.remote-tips
+  .main-content.remote-jobs
+  .box1
+  .content
+  .line:not(:last-child):hover {
   background-color: rgba(128, 128, 128, 0.068);
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .job-info {
+.remote-tips .main-content.remote-jobs .box1 .content .line .job-info {
   display: flex;
-  
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .job-info img {
+.remote-tips .main-content.remote-jobs .box1 .content .line .job-info img {
   width: 50px;
   margin-right: 15px;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .job-info .info h3 {
+.remote-tips .main-content.remote-jobs .box1 .content .line .job-info .info h3 {
   color: var(--light-blue);
   margin-bottom: 10px;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line:hover .job-info .info h3 {
+.remote-tips
+  .main-content.remote-jobs
+  .box1
+  .content
+  .line:hover
+  .job-info
+  .info
+  h3 {
   color: rgb(20, 90, 182);
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .job-info .info p {
+.remote-tips .main-content.remote-jobs .box1 .content .line .job-info .info p {
   color: black;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .job-info .info p span:nth-child(2n) {
+.remote-tips
+  .main-content.remote-jobs
+  .box1
+  .content
+  .line
+  .job-info
+  .info
+  p
+  span:nth-child(2n) {
   padding: 0px 8px;
   border-right: 1px solid lightgrey;
   border-left: 1px solid lightgrey;
-  margin:0 8px;
+  margin: 0 8px;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line .time {
+.remote-tips .main-content.remote-jobs .box1 .content .line .time {
   color: black;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line:last-child a {
+.remote-tips .main-content.remote-jobs .box1 .content .line:last-child a {
   display: block;
   padding: 15px;
   text-align: right;
@@ -99,7 +117,7 @@
   font-size: 17px;
 }
 
-.remote-tips .main-content.remote-jobs .box .content .line:last-child a:hover {
+.remote-tips .main-content.remote-jobs .box1 .content .line:last-child a:hover {
   color: rgb(28, 107, 211);
 }
 
@@ -270,7 +288,6 @@ header nav > a {
   justify-content: space-between;
 }
 
-
 .introduction .search form input[type="text"] {
   width: 84%;
   padding: 5px 10px;
@@ -374,7 +391,7 @@ header nav > a {
 }
 
 .landing.remote-jobs .container {
-justify-content: center;
+  justify-content: center;
 }
 
 .landing .container h1 {
@@ -1118,7 +1135,7 @@ justify-content: center;
   flex-basis: 48%;
   border: 1px solid lightgrey;
   background-color: white;
-  padding: 20px 20px 0 ;
+  padding: 20px 20px 0;
   height: fit-content;
 }
 
@@ -1143,7 +1160,6 @@ justify-content: center;
   background-color: white;
   border: 1px solid lightgrey;
   padding: 10px 25px;
-
 }
 
 .camp-qst .container .qst .box .content ul {
@@ -1158,7 +1174,7 @@ justify-content: center;
 }
 
 .camp-qst .container .qst .box .content ul li a:hover {
-  color: rgb(9, 87, 189)
+  color: rgb(9, 87, 189);
 }
 
 .camp-qst .comapanies .content {
@@ -1168,7 +1184,7 @@ justify-content: center;
 
 .camp-qst .comapanies .content > div {
   width: 12%;
-  
+
   margin-bottom: 10px;
   text-align: center;
   color: var(--light-blue);
@@ -1178,8 +1194,6 @@ justify-content: center;
 .camp-qst .comapanies .content > div:not(:nth-child(7n + 7)) {
   margin-right: 8px;
 }
-
-
 
 .camp-qst .comapanies .content > div img {
   width: 100%;
@@ -1228,7 +1242,7 @@ justify-content: center;
 
 .remote-tips .box .content > div .info p {
   font-size: 15px;
-  line-height: 1,6;
+  line-height: 1, 6;
 }
 
 .remote-tips .box > a {
@@ -1407,7 +1421,8 @@ justify-content: center;
 .post-content .container .first .content {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;text-align: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .post-content .container .first .content > div {
@@ -1467,6 +1482,7 @@ justify-content: center;
   width: 600px;
   margin: 0 auto;
 }
+/* end second */
 
 /* start thered */
 .thered {
@@ -1476,9 +1492,153 @@ justify-content: center;
 }
 /* end thered */
 
-
-/* end second */
-
 /* end content */
 
 /* end post remote jobs page */
+
+/* start post remote job formela */
+
+/* start content */
+
+.posteremotejobformela .content {
+  border: 1px solid var(--light-blue);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.posteremotejobformela .content h1 {
+  font-weight: normal;
+  text-align: center;
+}
+
+.posteremotejobformela .content > form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.posteremotejobformela .content > form > div {
+  flex: 0 1 48%;
+  margin: 10px 0;
+}
+
+.posteremotejobformela .content > form > div:nth-child(n):nth-child(-n+5) > label {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.posteremotejobformela .content > form > div:nth-child(n):nth-child(-n+5) > label::after {
+  content: "*";
+  color: rgb(60, 162, 225);
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.posteremotejobformela .content form > div:nth-child(n+1):nth-child(-n+4){
+  display: flex;
+  flex-direction: column;
+}
+
+.posteremotejobformela .content form > div:nth-child(n+1):nth-child(-n+4) input {
+  padding: 5px;
+  outline: none;
+}
+
+.posteremotejobformela .content form > div:nth-child(5) {
+  flex: 1 0 100%;
+}
+
+.posteremotejobformela .content form > div:nth-child(5) #toolbar {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.posteremotejobformela .content form > div:nth-child(5) #toolbar button {
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.posteremotejobformela .content form > div:nth-child(n+6):nth-child(-n+7) > div {
+padding: 5px 0;
+}
+
+.posteremotejobformela .content form input[type="submit"] {
+  color: white;
+  background-color: var(--light-blue);
+  padding: 10px 15px;
+}
+
+.posteremotejobformela .content form input[type="submit"]:hover {
+  background-color: rgb(35, 55, 235);
+}
+
+.posteremotejobformela .content form + p a {
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+
+/* editor section */
+
+#editor {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 200px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#toolbar {
+  margin-bottom: 10px;
+}
+
+#toolbar button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+}
+
+#toolbar button.active {
+  background-color: #777;
+  color: white;
+}
+
+#linkOptions {
+  background-color: #f5f5f5;
+  padding: 5px;
+  position: absolute;
+  display: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#linkOptions button {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: none;
+  background-color: #ddd;
+  color: #333;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#linkOptions button:last-child {
+  margin-right: 0;
+}
+/* end editor section */
+
+/* end content */
+
+/* end post remote job formela */
