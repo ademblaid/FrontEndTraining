@@ -1,42 +1,11 @@
-var linkOptions = document.getElementById("linkOptions");
-var currentLink = null;
-var editor = document.getElementById("editor");
-var hiddenInput = document.getElementById("hiddenInput");
+document.addEventListener("DOMContentLoaded", function () {
+  const quill = new Quill("#editor", {
+    theme: "snow"
+  });
 
-function createLink(element) {
-  var url = prompt("Enter the URL");
-  document.execCommand("createLink", false, url);
-  element.classList.remove("active");
-}
+  const hiddenContentInput = document.getElementById("hiddenContent");
 
-editor.addEventListener("mouseup", function (e) {
-  if (e.target.tagName === "A") {
-    currentLink = e.target;
-    linkOptions.style.display = "block";
-    linkOptions.style.left = e.clientX + "px";
-    linkOptions.style.top = e.clientY + "px";
-  } else {
-    linkOptions.style.display = "none";
-  }
+  quill.on("text-change", function () {
+    hiddenContentInput.value = quill.root.innerHTML;
+  });
 });
-
-editor.addEventListener("input", function () {
-  hiddenInput.value = this.innerHTML;
-});
-
-function modifyLink() {
-  var newUrl = prompt("Enter the new URL");
-  currentLink.href = newUrl;
-  linkOptions.style.display = "none";
-}
-
-function goToLink() {
-  window.open(currentLink.href, "_blank");
-}
-
-function toggleCommand(command, element, event) {
-  event.preventDefault();
-  document.execCommand(command);
-  element.classList.toggle("active");
-  document.getElementById('editor').focus();  // Set focus back to the editable area
-}
