@@ -202,7 +202,7 @@ body {
 /* start header */
 
 header {
-  background-color: rgb(61, 57, 57);
+  background-color: #363839;
   padding: 5px 0;
   max-height: 90px;
 }
@@ -619,6 +619,11 @@ header nav > a {
   gap: 20px;
 }
 
+.remote-tips .main-content .remote-jobs .remote-container > a {
+  all: unset;
+  cursor: pointer;
+}
+
 .remote-tips .main-content .remote-jobs .remote-container .comp-box {
   padding: 10px;
   background-color: white;
@@ -636,7 +641,10 @@ header nav > a {
 }
 
 .remote-tips .main-content .remote-jobs .remote-container .comp-box h2 {
+  /* display: block; */
   text-align: center;
+  /* font-size: 22px; */
+  /* text-decoration: none; */
   font-weight: normal;
   color: var(--light-blue);
   margin: 0 0 10px 0;
@@ -1302,38 +1310,47 @@ header nav > a {
   margin-bottom: 20px;
 }
 
-.sign-up .content .box form > div:not(:nth-last-child(2)) label,
-.sign-up .content .box form > div:not(:nth-last-child(2)) input {
+.sign-up .content .box form > div label,
+.sign-up .content .box form > div:first-child input {
   display: block;
   font-weight: bold;
   padding: 10px;
   width: 100%;
 }
+/* start multiple choice */
 
-.sign-up .content .box form div > div {
+.sign-up .content .box form #categoryContainer,
+.sign-up .content .box form #jobTypeContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.sign-up .content .box form div > div span {
-  padding: 10px 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+.sign-up .content .box form #categoryContainer label,
+.sign-up .content .box form #jobTypeContainer label {
+  width: 23%;
+  border: 1px solid grey;
+  margin: 5px;
 }
 
-.sign-up .content .box form div > div span:hover {
+.sign-up .content .box form #categoryContainer label:hover,
+.sign-up .content .box form #jobTypeContainer label:hover {
   cursor: pointer;
 }
 
+.sign-up .content .box form #categoryContainer input,
+.sign-up .content .box form #jobTypeContainer input {
+  display: none;
+}
+
+/* end multiple choice */
+
 .sign-up .content .box form div:nth-last-child(2) label {
   font-weight: 600;
+}
+
+.sign-up .content .box form div:nth-last-child(2) input {
+  margin-right: 5px;
 }
 
 .sign-up .content .box form > input:last-child {
@@ -1578,7 +1595,7 @@ header nav > a {
 /* editor section */
 
 .editor-container {
-  max-width: 100%;
+  max-width: 100% !important;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
@@ -1590,6 +1607,7 @@ header nav > a {
 #editor {
   border: 1px solid #ccc;
   border-radius: 5px;
+  max-width: 100%;
   padding: 10px;
   margin-top:10px;
   height: 300px;
@@ -1616,3 +1634,130 @@ header nav > a {
 /* end content */
 
 /* end post remote job formela */
+
+
+/* start articles page */
+.article {
+  padding-top: 0px;
+  padding-bottom: var(--section-padding);
+}
+
+.article article h1,
+.article article h2 {
+  margin: 30px 0;
+  font-weight: normal;
+}
+
+.article article p {
+  line-height: 1.5;
+}
+
+.article article ul,
+.article article ol {
+  display: block;
+  margin: 15px 0 15px 50px;
+  list-style: disc;
+}
+
+.article article ul li,
+.article article ol li {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+
+/* end articles page */
+
+/* start job detail page */
+.main-content.detail-page .detail-content {
+  border: 1px solid lightgrey;
+  padding: 15px;
+}
+
+.main-content.detail-page .detail-content h2 {
+  margin-bottom: 10px;
+}
+
+.main-content.detail-page .detail-content ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.main-content.detail-page .detail-content ul li span {
+  font-weight: bold;
+}
+
+.main-content.detail-page .detail-content ul li span.tags {
+  padding: 0 5px;
+  border: 1px solid rgba(60, 212, 60 , 0.5);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.main-content.detail-page .detail-content > p {
+  max-width: 100%;
+}
+
+.main-content.detail-page .detail-content > p:first-of-type,
+.main-content.detail-page .detail-content > p:nth-of-type(2) {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main-content.detail-page .detail-content hr {
+  margin: 10px 0;
+}
+
+.main-content.detail-page .detail-content a {
+  display: block;
+  width: fit-content;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main-content.detail-page .detail-content a:first-of-type {
+  background-color: var(--light-blue);
+  padding: 10px;
+  border: 1px solid var(--light-blue);
+  color: white;
+  font-weight: bold;
+}
+
+.main-content.detail-page .detail-content a:first-of-type:hover {
+  background-color: white;
+  color: var(--light-blue);
+}
+
+.main-content.detail-page .detail-content a:last-of-type {
+  font-style: italic;
+  color: var(--light-blue);
+}
+
+.main-content.detail-page .detail-content a:last-of-type:hover {
+  color: rgb(17, 94, 219);
+}
+
+.main-content.detail-page > a {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  background-color: var(--containers-color);
+  color: var(--light-blue);
+  border: 1px solid lightgrey;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-content.detail-page > a:hover {
+  color: rgb(33, 112, 208);
+}
+/* end job detail page */

@@ -1,0 +1,84 @@
+// Assuming $row contains the fetched job data from the database
+$addedTimestamp = strtotime($row['added_date']);  // Convert stored date to timestamp
+$currentTimestamp = time();  // Get current timestamp
+
+$secondsInADay = 24 * 60 * 60;  // Number of seconds in a day
+$daysPassed = floor(($currentTimestamp - $addedTimestamp) / $secondsInADay);
+
+echo "Days since job was added: " . $daysPassed;
+
+USE friend;
+INSERT INTO qst_and_articles (title, content)
+VALUES (
+    1,
+    'John Doe'
+);
+
+---------Comany's list:----------
+    Khalifa Airways
+    Air Express Alger
+    AlgerianTV
+    Algerie Ferries
+    algeriePost
+    Antinea Airlines
+    Asmidal
+    Mobilis
+    Cevital
+    Echorouk
+    El Watan
+    Elkhabar
+    Hamoud
+    Air Algerie
+    Djezzy
+    Naftal
+    Rail Transport
+    Ooredoo
+    Radio Algeria
+    Saidal
+    SNVI
+    Sonalgaz
+    Sonatrach
+    Star Aviation
+    Tasily
+    ------------------
+
+    category of jobs
+    Virtual Assistant Jobs 
+    healthcare jobs
+    marketing jobs
+    recruiter and hr jobs
+    customer service jobs 
+    accounting and finance jobs 
+    editing jobs 
+    writing jobs 
+    project manager jobs 
+    q and a jobs 
+    design jobs 
+    teaching jobs
+    it jobs 
+    legal jobs
+    seles jobs 
+    other jobs
+
+
+
+    how to get the time from the data base and calcul it:
+    // Assuming $row is the database row retrieved
+    $addedTimestamp = new DateTime($row['added_date']);
+    $currentTimestamp = new DateTime();
+
+    $timeDifference = $currentTimestamp->diff($addedTimestamp);
+
+    if ($timeDifference->days > 0) {
+        echo $timeDifference->days . " days ago";
+    } elseif ($timeDifference->h > 0) {
+        echo $timeDifference->h . " hours ago";
+    } else {
+        echo "Less than an hour ago";
+}
+
+// Assuming $row is the database row retrieved
+$addedTimestamp = $row['added_date'];
+$formattedTime = formatTimeAgo($addedTimestamp);
+
+echo $formattedTime;
