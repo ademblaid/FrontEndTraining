@@ -138,6 +138,95 @@ ul {
 .header .main-nav > li > a:hover::before {
   left: 0;
 }
+
+/* start mega menu */
+.header .main-nav > li:hover .mega-menu {
+  opacity: 1;
+  z-index: 1;
+  top: calc(100% + 1px);
+}
+.header .mega-menu {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 50px);
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  border-bottom: 3px solid var(--main-color);
+  justify-content: space-between;
+  gap: 30px;
+  opacity: 0;
+  z-index: -1;
+  transition: top var(--main-transition), opacity var(--main-transition);
+  -webkit-transition: top var(--main-transition), opacity var(--main-transition);
+  -moz-transition: top var(--main-transition), opacity var(--main-transition);
+  -ms-transition: top var(--main-transition), opacity var(--main-transition);
+  -o-transition: top var(--main-transition), opacity var(--main-transition);
+}
+@media (max-width: 767px) {
+  .header .mega-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px;
+  }
+}
+.header .mega-menu .image img {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  .header .mega-menu .image {
+    display: none;
+  }
+}
+.header .mega-menu .links {
+  min-width: 250px;
+  flex: 1;
+}
+.header .mega-menu .links li {
+  position: relative;
+}
+.header .mega-menu .links li:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+@media (max-width: 767px) {
+  .header .mega-menu .links:first-of-type li:last-child {
+    border-bottom: 1px solid lightgrey;
+  }
+}
+.header .mega-menu .links li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  z-index: -1;
+  transition: var(--main-transition);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.header .mega-menu .links li:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.header .mega-menu .links li a {
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* end mega menu */
 /* end header */
 /* start landing */
 .landing {
@@ -180,8 +269,10 @@ ul {
   letter-spacing: -2px;
   margin: 0;
 }
-.landing .text h1 {
-  font-size: 28px;
+@media (max-width: 992px) {
+  .landing .text h1 {
+    font-size: 28px;
+  }
 }
 .landing .text p {
   font-size: 23px;
@@ -205,8 +296,8 @@ ul {
 .landing .image img {
   max-width: 100%;
   position: relative;
-  animation: top-down 3.5s linear infinite;
-  -webkit-animation: top-down 3.5s linear infinite;
+  animation: top-down 5s linear infinite;
+  -webkit-animation: top-down 5s linear infinite;
 }
 .landing .go-down {
   color: var(--main-color);
@@ -228,8 +319,8 @@ ul {
   color: var(--main-color-alt);
 }
 .landing .go-down i {
-  animation: bouncing 1.5s linear infinite;
-  -webkit-animation: bouncing 1.5s linear infinite;
+  animation: bouncing 1.5s infinite;
+  -webkit-animation: bouncing 1.5s infinite;
 }
 /* end landing */
 /* start animation */
@@ -239,7 +330,7 @@ ul {
     top: 0;
   }
   50% {
-    top: -40px;
+    top: -50px;
   }
 }
 @keyframes bouncing {
