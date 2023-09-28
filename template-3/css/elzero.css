@@ -88,7 +88,7 @@ ul {
 }
 .main-title:hover {
   color: white;
-  border: 2px solid white;
+  border: 2px solid var(--main-color);
   transition-delay: 0.5s;
 }
 .spikes {
@@ -492,7 +492,7 @@ ul {
   max-width: 100%;
 }
 .features .box:hover .img-holder::after {
-  border-width: 170px 500px 170px 0;
+  border-width: 0px 500px 170px 0;
 }
 .features .box h2 {
   position: relative;
